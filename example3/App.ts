@@ -10,7 +10,10 @@ import DB from './DB';
  * let's just focus on what they _do_.
  * 
  * The `injectable()` decorator flags this class as something that TSyringe should keep track of. The `inject()`
- * decorator tell
+ * decorator tells TSyringe that it wants an instance of a dependency. Rather that instantiate it _ourselves_
+ * (e.g. new DB()) - TSyringe is going to take care of that for us.
+ * 
+ * See `./start.ts`.
  */
 @injectable()
 class App {
